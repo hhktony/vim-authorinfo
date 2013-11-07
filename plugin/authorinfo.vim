@@ -85,15 +85,17 @@ function s:insert ()
       call append (3, s:modified)
       call append (4, s:desc)
       call append (5, s:author)
+      call append (6, s:company)
   endif
 
   unlet s:comment
   unlet s:type
-  unlet s:author
   unlet s:file
-  unlet s:desc
   unlet s:created
   unlet s:modified
+  unlet s:desc
+  unlet s:author
+  unlet s:company
 
 endfunction
 
