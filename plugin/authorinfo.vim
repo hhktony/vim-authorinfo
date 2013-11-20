@@ -5,8 +5,7 @@
 " Author:   butbueatiful (butbueatiful@gmail.com)
 " VERSION:  1.0
 
-function s:filetype ()
-
+function! s:filetype ()
   let s:type_on = 1
   let s:file = expand("<afile>:t")
   let l:ft = &ft
@@ -40,14 +39,13 @@ function s:filetype ()
     let s:type_on = 0
   endif
   unlet s:file
-
 endfunction
 
 let g:authorinfo_author  = exists('g:authorinfo_author')  ? g:authorinfo_author  : system ("whoami | tr -d '\n'")
 let g:authorinfo_email   = exists('g:authorinfo_email')   ? g:authorinfo_email   : "Youremail"
 let g:authorinfo_company = exists('g:authorinfo_company') ? g:authorinfo_company : "Yourcompany"
 
-function s:insert ()
+function! s:insert ()
 
   call s:filetype ()
 
@@ -85,7 +83,6 @@ function s:insert ()
       unlet s:author
       unlet s:company
   endif
-
 endfunction
 
 autocmd BufNewFile * call s:insert ()
