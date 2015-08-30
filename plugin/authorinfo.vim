@@ -14,7 +14,7 @@ function! s:filetype ()
       let s:type = s:comment . "!/usr/bin/env bash"
   elseif l:ft ==# 'python'
       let s:comment = "#"
-      let s:type = s:comment . "-*- coding:utf-8 -*-"
+      let s:type = s:comment . " -*- coding:utf-8 -*-"
   elseif l:ft ==# 'perl'
       let s:comment = "#"
       let s:type = s:comment . "!/usr/bin/env perl"
